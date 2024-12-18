@@ -1,4 +1,4 @@
-import { IonPage, IonHeader, IonToolbar, IonTitle, IonContent, IonList, IonListHeader, IonItem, IonLabel } from "@ionic/react";
+import { IonPage, IonHeader, IonToolbar, IonTitle, IonContent, IonList, IonItem, IonLabel } from "@ionic/react";
 import ExploreContainer from "../components/ExploreContainer";
 import React, {useState, useEffect} from 'react';
 import'./Tab3.css';
@@ -11,16 +11,6 @@ const Tab3: React.FC = () => {
   // URL for my WordPress JSON REST endpoint
   const dataURL = 
   "https://dev-nickfitzpatrick-5513-w11.pantheonsite.io/wp-json/twentytwentyone-child/v1/bikes";
-
-  // Parse scf_fields into a useable form
-  // const parseSCFFields = (scfString: string) => {
-  //   if (!scfString) return {};
-  //   return scfString.split(',').reduce((acc, pair) => {
-  //     const [key, ...value] = pair.split(':');
-  //     acc[key.trim()] = value.join(':').trim();
-  //     return acc;
-  //   }, {} as Record<string, string>);
-  // };
 
   const parseSCFFields = (scfString: string) => {
       const parsedArray = JSON.parse(`[${scfString}]`) as Array<Record<string, string>>;
@@ -66,7 +56,6 @@ const Tab3: React.FC = () => {
 
       {/* DISPLAYING THE WORDPRESS DATA */}
       <IonList id="road-list">
-        {/* <IonListHeader></IonListHeader> */}
         {dataset.map((item, index) => (
           <IonItem lines = "inset" key={index}>
             <IonLabel>

@@ -1,4 +1,4 @@
-import { IonPage, IonHeader, IonToolbar, IonTitle, IonContent, IonList, IonListHeader, IonItem, IonLabel } from "@ionic/react";
+import { IonPage, IonHeader, IonToolbar, IonTitle, IonContent, IonList, IonItem, IonLabel } from "@ionic/react";
 import ExploreContainer from "../components/ExploreContainer";
 import React, {useState, useEffect} from 'react';
 import'./Tab1.css';
@@ -14,14 +14,6 @@ const Tab1: React.FC = () => {
 
   // Parse scf_fields into a useable form
   const parseSCFFields = (scfString: string) => {
-    if (!scfString) return {};
-    const splitcorrect = scfString.split(',').reduce((acc, splitString) => {
-      if (acc.length > 0) {
-        const splitVar = splitString.split(":");
-
-      }
-      return [...acc, splitString]
-    }, [] as string[])
     return scfString.split(',').reduce((acc, pair) => {
       const [key, ...value] = pair.split(':');
       acc[key.trim()] = value.join(':').trim();
@@ -63,7 +55,6 @@ const Tab1: React.FC = () => {
 
       {/* // DISPLAYING THE WORDPRESS DATA */}
       <IonList id="road-list">
-        {/* <IonListHeader>Roads</IonListHeader> */}
         {dataset.map((item, index) => (
           <IonItem lines = "inset" key={index}>
             <IonLabel>
