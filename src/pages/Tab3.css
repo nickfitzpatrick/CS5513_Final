@@ -1,0 +1,13 @@
+
+
+.bike-img {
+    width: 50%; 
+    height: auto;
+}
+
+@media (max-width: 768px) {
+    .bike-img {
+    width: 100%;
+    }
+}
+

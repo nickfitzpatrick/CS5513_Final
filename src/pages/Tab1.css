@@ -1,0 +1,52 @@
+
+
+.road-img {
+    width: 50%; 
+    height: auto;
+}
+
+@media (max-width: 768px) {
+    .road-img {
+    width: 100%;
+    }
+}
+
+
+#road-list {
+    margin: 20px;
+}
+
+#road-list ion-item {
+    margin-bottom: 15px;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+#road-list ion-item {
+    background-color: #333;
+}
+
+
+#road-list ion-label h4 {
+    margin: 5px 0;
+    font-size: 16px;
+    color: #619eba;
+    font-weight: bold;
+}
+  
+#road-list ion-label p {
+    margin-top: 10px;
+    margin-bottom: 15px;
+    font-size: 14px;
+    color: #a1c0cf;
+    letter-spacing: 0.2px;
+}
+
+
+.road-img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-top: 10px;
+}
