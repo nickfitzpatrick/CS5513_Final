@@ -6,7 +6,7 @@ import'./Tab1.css';
 const Tab1: React.FC = () => {
 
   // dataset state variable to hold JSON data fro WP
-  const [dataset, setDataset] = useState([]);
+  const [dataset, setDataset] = useState<any[]>([]);
 
   // URL for my WordPress JSON REST endpoint
   const dataURL = 
